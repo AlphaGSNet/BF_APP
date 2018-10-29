@@ -1,0 +1,13 @@
+inherit_from: .rubocop_todo.yml
+
+GuardClause:
+  Enabled: false
+
+ConditionalAssignment:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - db/**
+    - db/migrate/**
+    - vendor/**/*
