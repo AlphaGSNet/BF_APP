@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'home/beta_notification', to: 'home#beta_notification', as: 'beta_notification', path: '/notification'
   get 'promo/mobile_app', to: 'home#mobile_app'
   get 'dl', to: 'home#dl'
+  
   controller :home do
     get :badges
     get :mark_shown_invite_friends

@@ -6,8 +6,7 @@ Rails.application.routes.draw do
     controller :welcome do
       get :finish_registration
       post :save_finish_registration
-    end
-    
+    end    
 
     resources :comments, except: [:index] do
       post :toggle_vote, on: :member
@@ -69,6 +68,7 @@ Rails.application.routes.draw do
     get 'users/:id/inbox', to: 'users#inbox', as: 'inbox'
     get 'users/:id/preferences', to: 'users#preferences', as: 'preferences'
     get 'users/:id/profile', to: 'users#profile', as: 'profile'
+
     resources :user_credits do
       collection do
         match :buy_credits, via: [:get, :post]
@@ -325,7 +325,7 @@ Rails.application.routes.draw do
         get :tabs_information
         get :join
         get :list
-        get  :search
+        get :search
         get :chat_list
         get :start_conversation
         get :suggested_mentor_conversation
